@@ -9,8 +9,6 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
-const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
-];
+const eslintConfig = [...compat.extends("next/core-web-vitals", "next/typescript"), { ignores: [".github/pull_request_template.md"] }];
 
 export default eslintConfig;
