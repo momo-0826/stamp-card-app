@@ -12,9 +12,10 @@ export const Stamp: React.FC<Props> = ({ isStamped, onToggle }) => {
     <div
       onClick={onToggle}
       style={{
-        width: "50px",
-        height: "50px",
+        width: "100%",
+        height: "80px",
         position: "relative",
+        margin: "auto",
       }}
     >
       {isStamped && (
@@ -25,6 +26,9 @@ export const Stamp: React.FC<Props> = ({ isStamped, onToggle }) => {
           width={50}
           style={{
             objectFit: "contain",
+            display: "block",
+            margin: "auto",
+            padding: "15px 0",
           }}
         />
       )}

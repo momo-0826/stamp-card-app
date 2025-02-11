@@ -1,12 +1,12 @@
 import React from "react";
 import { useStampCardStore } from "../store/stampeCardStore";
-import { StampCard } from "../components/StampCard";
+import { StampCardLayout } from "../components/StampCardLayout";
 
 export const StampCardContainer: React.FC = () => {
-  const { stamps, toggleStamp } = useStampCardStore();
+  const { stamps, toggleStamp, resetStamps } = useStampCardStore();
   return (
     <div>
-      <StampCard stamps={stamps} onToggleStamp={toggleStamp} />
+      <StampCardLayout stamps={stamps} onToggleStamp={toggleStamp} onReset={resetStamps} />
     </div>
   );
 };
